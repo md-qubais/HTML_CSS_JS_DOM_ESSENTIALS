@@ -1,0 +1,8 @@
+what is html?
+html is hyper text markup langauge
+it is not a programming langauge
+it is the building blocks of any web page
+all the things that we can be seen in the website are built using html
+some of the examples are images,header,footer these are things that are used to built a website is developed by html
+it is represented in the form of tags for example: <p></p> <span></span> <header></header>
+current version of html is html5
