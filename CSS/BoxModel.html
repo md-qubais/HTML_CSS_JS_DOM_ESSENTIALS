@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* box model contains four things wrapped in each other 
+           content,padding,border,margin 
+        */
+        h1{
+            border-width: 5px;
+            border-style: solid;
+            border-color: orange;
+
+            border:5px solid orange;
+
+
+
+
+            /* padding creates space inside and element */
+            padding-top: 30px;
+            padding-right: 50px;
+            padding-bottom: 70px;
+            padding-left: 90px;
+
+            padding: 30px 50px 70px 90px;
+
+            /* top bottom 50px 
+               left and right 100px
+            */
+            padding: 50px 100px;
+
+
+            /* top bottom left right */
+            padding: 100px;
+
+
+
+
+
+            /* margin creates space outside element */
+            /* margin-top: 50px;
+            margin-bottom: 100px;
+            margin-left: 150px;
+            margin-right: 200px; */
+
+            /* margin same on all four sides */
+            margin: 100px;
+
+
+
+            /* below is the concept of box sizing */
+            /* lets say some width and height to the box */
+            width: 300px;
+            height: 300px;
+            /* box sizing property decides how your box should behave */
+            /* this below one is the default box sizing */
+            /* it will increase the total height and width */
+            box-sizing: content-box;
+
+            /* it wont increase the total height and width if wont neceassy
+               it the padding and borders are forcing the element to incrase its
+               either width and height then it will increase
+               it will do all the calculations inside that height and width
+            */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>box model</h1>
+</body>
+</html>

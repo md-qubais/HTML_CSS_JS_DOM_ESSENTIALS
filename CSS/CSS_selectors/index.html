@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS selectors</title>
+    <style>
+        /* selecting both h1 and h2 and applying some styling to them */
+        h1,h2{
+            color: green;
+        }
+        /* target all the li inside the ul
+        target all the descendants li of ul
+        */
+        ul li{
+            color: red;
+        }
+
+        /* css execution happens to be from top to bottom
+        so it will overrides the previous properties and styling
+        */
+        ul li{
+            color: green;
+        }
+
+        /* the below li is not affected because descendant selectors are given more priority
+        to overcome this we can use id selector or class selector
+        */
+        li{
+            color: blue;
+        }
+
+
+        /* by the below way we can use the class selector to select
+        the difference between class selector and the id selector is that
+        class selector can be applied to multiple elements
+        id selector can be applied to unique element
+        */
+
+        
+      
+        .item{
+            color: orange;     
+        }
+
+
+        /* so i override that ul li but class selectors have more priority than descendant selectors
+        so class with item is orange not black
+        */
+        ul li{
+            color:black
+        }
+
+        /* id selector are selected in the below way
+        and have more priority than class selectors
+        */
+        #list-item{
+            color:brown
+        }
+
+        /* for above example list-item has more priority than item */
+        .item{
+            color:hotpink
+        }
+
+        /* below is known as the type attribute */
+        input[type='email']{
+            background-color: orange;
+        }
+
+
+        /* so in genearl the id selectors have more preference than class selectors and
+        the class selectors have more preference than tag/descendants selectors
+        */
+
+    </style>
+</head>
+<body>
+    <h1>heading 1</h1>
+    <h2>heading 2</h2>
+    <ul>
+        <li id="list-item" class="item">html</li>
+        <li>css</li>
+        <li class="item">reactjs</li>
+        <li>javascript</li>
+    </ul>
+    <input type="text">
+    <input type="email">
+   
+</body>
+</html>
