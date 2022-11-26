@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sticky</title>
+    <style>
+        body{
+            width:200vw;    
+            height:200vh; 
+        }
+        .container{
+            background-color: bisque;
+            height: 500px;
+            width: 500px;
+            margin-left: 200px;
+        }
+
+        .box{
+            position: sticky;
+            /* if we write the top that means it will compute from the edge of the
+            browser and the starting postion of that element if its equal to the units
+            that provide then it will perform sticky on the element till the parent element is hidden
+            */
+            top:0px;
+            /* for left 0px that means when the left edge of the browser and left starting position
+               of the element is computed if it satisfies then it will perform sticky operation till the element is hidden
+            */
+            left:0px;   
+            height:100px;
+            width: 100px;
+            background-color:black ;
+        }
+    </style>
+
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box">
+
+        </div>
+    </div>
+</body>
+</html>

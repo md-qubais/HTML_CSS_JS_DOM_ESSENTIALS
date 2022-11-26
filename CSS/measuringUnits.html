@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Measurements Units</title>
+    <style>
+      body {
+        font-size: 20px;
+        margin: 0;
+      }
+
+      div {
+        font-size: 10px;
+      }
+
+      h1,
+      p {
+        /* this below is absolute units that is pixels */
+        /* font-size: 50px; */
+
+        /* below is relative units that is em
+               check in the developers tools and check it
+               and then take a look at computed section there you can see
+               fontsize of h1 and p is 48 px
+               so if 3em is 48px then 1em is 16px but this is in general
+
+               so mainly em unit is actually relative or depends upon its parent element size
+               uncomment fontsize 20 px from the body and check in the computed section
+               the size of h1 and p chnages from 48px to 60px
+               that means 1 em is equals to 20px because we specify in the parent element
+               the parent element for h1 and p that is the ancestor of h1 and p is body
+               and font-size of body is 20px so em is taking from its parent/ancestor
+               that is 1em is now equals to 20px
+
+
+               and now select the div and chaange the font size
+               because parent element of h1 is body
+               and parent element of p is div
+               select div and give some pixels to div
+
+               and now lets see in the computed section that
+               h1 length is 40px and p length is 30px due to em is accessing from its parent element
+               1em is actually equals to the size of its parent element
+
+
+
+
+               now moving forward to rem
+               rem always calulate its font size not from parent/ancestor element
+               always rem calculate its font size from html element
+               the default front-size of html element is 16pixels
+               so by default 1rem is equals to 16px
+            */
+        font-size: 3rem;
+      }
+      html {
+        /* by default the font size of html is 16px */
+        font-size: 10px;
+      }
+
+      /* below is the example for percentage
+         it takes the size height width any thing according to its parent element
+         now go to inspect and computed section it shows it size as 16px because
+         by default section size if 16px
+      */
+      section {
+        font-size: 30px;
+      }
+
+      /* so by this means relative units basically takes anything of its parent elements
+         and are calcuated according to its parent element
+         let say height,width,font-size anything if we apply relative it will calculate
+         from its parent element
+      */
+      h1 {
+        font-size: 100%;
+        margin: 0;
+      }
+
+      section {
+        font-size: 30px;
+        background-color: orange;
+        color: white;
+        /* now it will take the 70% width of its parent element
+           that is html is its parent element it will take 70% of its parent elements width
+        */
+        width: 70%;
+      }
+
+      section div {
+        background-color: green;
+        /* now this will take the widht 50% of its parent element that is section */
+        width: 50%;
+      }
+
+      /* now we are looking at the viewport height and viewport width browser viewport*/
+      /* decrease the height of the web page or browser then viewport height or width will
+       also be decrease because viewport is nothing but the browser height and width
+       that are currently visible
+      */
+      section {
+        height: 100vh;
+        /* now the seciton elemnt contains viewport widht of 50vw 50percent of viewport width  */
+        width: 50vw;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <!-- in general css supports 2 kinds of units 
+         absolute and relative
+         absoulte units are fixed units eg: if we assign 200px no matter what
+                                              are no matter what screen we are using
+                                              it is always 200px
+         some eg are : px,cm,mm,in,pt,pc(pica)
+         
+         relative units are not fixed it will varies depends upon (another property) the elements and parent elements
+         and also depending upon the screens eg: if we assign 50% it will vary according to the screen
+         some eg are : em, rem, vw, vh, %
+                                          
+    -->
+
+    <!-- default font size of heading 1 is 32pixels -->
+    <!-- <h1>Heading</h1> -->
+
+    <!-- <div> -->
+    <!-- default font size of paragraph is 16px -->
+    <!-- <p>paragraph</p> -->
+    <!-- </div> -->
+    <section>
+      <h1>heading</h1>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+          voluptatem tempora harum illo laborum quibusdam quas? Dolorem sit
+          deleniti dolore enim cupiditate, iste itaque, dolorum aspernatur fuga
+          delectus, facere vel!
+        </p>
+      </div>
+    </section>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, incidunt
+      ab, ipsam in minima doloribus placeat quas rerum, ullam quibusdam
+      explicabo exercitationem quam nam nesciunt eius. Repellat eaque ipsum
+      molestiae.
+        </p>
+  </body>
+</html>

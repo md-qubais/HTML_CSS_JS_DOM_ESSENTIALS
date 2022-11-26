@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* box sizing in practice */
+        .box{
+            height:500px;
+            width:500px;
+            display: inline-block;
+        }
+
+        .box1{
+            background-color: orange;
+        }
+        .box2{
+            background-color: brown;
+        }
+
+
+        .box1{
+            border-width: 5px;
+            border-color: blue;
+            border-style: solid;
+
+            padding:10px;
+            box-sizing: border-box;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- by this below way we can remove the spaces between any 2 inline-block elements -->
+    <div class="box box1"></div><div class="box box2"></div>
+</body>
+</html>
