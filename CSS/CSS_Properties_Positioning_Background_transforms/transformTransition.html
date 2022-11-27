@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition and Transform</title>
+</head>
+<style>
+    .box{
+        height:200px;
+        width: 200px;
+        background-color: orange;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 50px;
+        box-sizing: border-box;
+        transition:transform 1s;
+    }
+    .box:hover{
+        /* transform: rotate(360deg); */
+        transform: translate(100px,100px) scale(1.5)
+    }
+</style>
+<body>
+    <div class="box">
+        <h1>box</h1>
+    </div>
+</body>
+</html>

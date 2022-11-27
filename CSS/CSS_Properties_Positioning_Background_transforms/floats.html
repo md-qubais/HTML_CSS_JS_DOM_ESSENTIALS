@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>floats</title>
+    <!-- in css we can use different ways to align items in the page
+    using grids, flexbox and one of the way to align items is floats
+    older css code uses float but modern web development use grids and flexboxs
+    float takes the element from the normal flow and can place it as far left or right as possible
+    when we use float we must indicate width that how wide the widht styling should be
+
+    -->
+    <style>
+        
+        .container{
+            background-color: gray;
+            /* margin-left: 500px;
+            width: 500px; */
+            /* height: 700px;
+            width: 700px; */
+            /* overflow: auto; */
+        }
+        
+        .left{
+            background-color: orange;
+            height:100px;
+            width: 100px;
+            /* now float left or right will hamper the flow of the next elements
+               so the next elements will take the place of that element where the float is applied
+               and its present onthe top of the next element
+            */
+            float: left;
+        }
+
+        /* note that floats works on it parent container
+           so if we use floats then the parent container assumes that there is no elemenet
+           because float indicates that parent elements that i am no more in your container
+           but i tend to work on the basis of my parent element
+        */
+        
+        .right{
+            background-color: green;
+            height:100px;
+            width: 100px;
+            /* float right measn put the element as right as possible by hampering the noraml flow of the next elements */
+            float :right;
+        }
+
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: black;
+        }
+
+        /* if both of them applied the same float lets say right or left
+            then the both will appear side by side of each element
+        */
+
+        /* when there are only 2 elements in the parent container and both the child have
+           been applied float left or right then the parent container will vanish
+           considering that they wont have any child related to the parent container
+           so either give the parent container height or width; 
+           or add one more element inside the parent that will be coverd and placed under/below left or the left eleent will be on top of that element
+           or we can use overflow auto this specifies that if the element is overflown then according to that do something automatically that is scroll
+           create one more div and assign clear classname to it and clear: both css what it does is makes the parent container visible
+           but it is creating a div inorder to avoid that 
+
+        */
+        /* .clear{
+            clear: both;
+        } */
+
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container clearfix">
+        <div class="left"></div>
+        <div class="right"></div>
+        <!-- <div class="box"></div> -->
+        <!-- <div class="clear"></div> -->
+    </div>
+</body>
+</html>

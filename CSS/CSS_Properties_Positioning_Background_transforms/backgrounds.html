@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Backgrounds</title>
+
+    <style>
+      .container {
+        width: 500px;
+        height: 500px;
+        /* the border will be given pixels but in that given pixels there will be two border 
+           in between they are covered with the image or backgorund what ever is present      
+          */
+        border: 100px double red;
+        margin:100px auto;
+        background-image: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg");
+        color: white;
+        /* means background will be of 200px and there will be multiple images of background image which are of 200px */
+        /* background-size: 200px; */
+        /* inorder to that background wont get repeated we need to wrte an another property as below */
+        background-repeat: no-repeat;
+
+
+        /* the background that we are setting will have top bottom gap as 50px and left right gap/margin of 50px 50px */
+        
+        /* if we are using double as the border 2 params
+           if you write right bottom then the left and top will be clipped in the border distance gap
+        */
+        background-position: 50px 50px;
+
+        /* it will works as same as fixed into the viewport and visible till the parent element or where the element is created is backgrund is not hidden */
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>hello world</h1>
+    </div>
+  </body>
+</html>
